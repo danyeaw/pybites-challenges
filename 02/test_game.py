@@ -55,18 +55,23 @@ def test_get_possible_dict_words(setup_game):
 
 def test_validation():
     draw = list("garytev".upper())
+    # Test not in Dictionary
     word = "GARYTEV"
     with pytest.raises(ValueError):
         _validation(word, draw)
+    # Test letter not in hand
     word = "F"
     with pytest.raises(ValueError):
         _validation(word, draw)
+    # Test don't have 2 T's
     word = "GARETTA"
     with pytest.raises(ValueError):
         _validation(word, draw)
+    # Test word is correct
     draw = list("Galanthus".upper())
     word = "Galanthus"
     assert _validation(word, draw)
+    # Test don't have 3 a's
     word = "galanas"
     with pytest.raises(ValueError):
         _validation(word, draw)
