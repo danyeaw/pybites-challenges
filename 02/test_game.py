@@ -31,7 +31,6 @@ def test_max_word_value():
     assert max_word_value(TEST_WORDS) == "barbeque"
 
 
-@pytest.mark.xfail()
 def test_get_permutations_draw(setup_game):
     draw = setup_game
     gen_permutations_n_letters = sum(
@@ -46,7 +45,6 @@ def test_get_permutations_draw(setup_game):
     assert gen_permutations_any_list == gen_permutations_n_letters
 
 
-@pytest.mark.xfail()
 def test_get_possible_dict_words(setup_game):
     fixed_draw = list("garytev".upper())
     words = get_possible_dict_words(fixed_draw)
