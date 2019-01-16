@@ -30,7 +30,6 @@ def test_get_tags(setup_tags):
     assert setup_tags.count("python") == 10
 
 
-@pytest.mark.xfail
 def test_get_top_tags(setup_tags):
     top_tags = dict(get_top_tags(setup_tags)).items()
     assert len(top_tags) == TOP_NUMBER
@@ -39,7 +38,6 @@ def test_get_top_tags(setup_tags):
         assert tag in pybites_tags.items()
 
 
-@pytest.mark.xfail
 def test_get_similarities(setup_tags):
     similar_tags = dict(get_similarities(setup_tags)).items()
     assert len(similar_tags) == 3
