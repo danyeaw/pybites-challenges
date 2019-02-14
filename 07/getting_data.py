@@ -10,8 +10,8 @@ import time
 
 from twython import TwythonStreamer
 
-from config import CONSUMER_KEY, CONSUMER_SECRET
-from config import ACCESS_TOKEN, ACCESS_SECRET
+from confignogit import CONSUMER_KEY, CONSUMER_SECRET
+from confignogit import ACCESS_TOKEN, ACCESS_SECRET
 
 MAX_TWEETS = 1000
 OUTPUT = 'data_{}.json'.format(int(time.time()))
